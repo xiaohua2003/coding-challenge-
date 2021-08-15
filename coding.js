@@ -81,3 +81,24 @@ function findNextSquare(sq) {
     
   }
   findNextSquare(120)
+// delete repeated number or string in an array or string
+var uniqueInOrder=function (iterable){
+  //your code here - remember iterable can be a string or an array
+  if (typeof iterable =="string"){
+     var a=iterable.split("")
+  } else{
+    var a=iterable
+  }
+
+for (i=0; i<a.length;i++){
+  for (j=i+1; j<a.length; j++){
+    if (a[i]==a[j]){
+      a.splice(j,1)
+      j--
+    }
+  } 
+}
+  return a.join()
+  console.log(typeof a)}
+
+console.log(uniqueInOrder("dddssas"));
