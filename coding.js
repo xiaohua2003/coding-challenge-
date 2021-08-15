@@ -67,4 +67,17 @@ function openOrSenior(data){
         a.push("Open")
       }
     }
-    return a
+    return a}
+/*find perfect */ 
+function findNextSquare(sq) {
+    // Return the next square if sq is a perfect square, -1 otherwise
+    if (Number.isInteger(Math.sqrt(sq))){
+      var a = Math.sqrt(sq)+1
+      console.log(a)
+      return a*a
+    } else{
+      return -1;
+    }
+    
+  }
+  findNextSquare(120)
