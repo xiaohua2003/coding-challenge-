@@ -102,3 +102,16 @@ for (i=0; i<a.length;i++){
   console.log(typeof a)}
 
 console.log(uniqueInOrder("dddssas"));
+
+// https://dinwy.github.io/everyday/2019/july/superMarketQueueAndSumOfParts/
+// https://www.codewars.com/kata/57b06f90e298a7b53d000a86/train/javascript
+function queueTime(customers, n) {
+  var arr = new Array(n).fill(0);
+
+  for (var i = 0; i < customers.length; i++) {
+    var idx = arr.indexOf(Math.min(...arr));
+    arr[idx] += customers[i];
+  }
+
+  return Math.max(...arr);
+}
